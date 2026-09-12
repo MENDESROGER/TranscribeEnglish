@@ -1,0 +1,12 @@
+target/
+*.class
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+tools/
+output/*
+!output/.gitkeep
+*.mp3
+*.wav
