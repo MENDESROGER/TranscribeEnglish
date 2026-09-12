@@ -15,7 +15,7 @@ public final class Main {
 
         ExternalCommandRunner commandRunner = new ExternalCommandRunner();
         TextFileReader textFileReader = new TextFileReader();
-        TtsService ttsService = new TtsService(commandRunner);
+        TtsService ttsService = new TtsService();
         AudioService audioService = new AudioService(commandRunner);
         AudioGenerator generator = new AudioGenerator(textFileReader, ttsService, audioService);
 

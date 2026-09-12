@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
     <name>TranscribeEnglish TTS</name>
-    <description>Gera um único MP3 a partir de frases em um arquivo texto usando TTS local gratuito (eSpeak NG + FFmpeg).</description>
+    <description>Gera um único MP3 a partir de frases em um arquivo texto usando Google Text-to-Speech (gTTS) e FFmpeg.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

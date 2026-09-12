@@ -59,8 +59,7 @@ public class AudioGenerator {
 
                 System.out.println("[" + phraseIndex + "/" + phrases.size() + "] Gerando áudio...");
 
-                Path rawAudio = tempDir.resolve(
-                        String.format("phrase_%03d_raw%s", phraseIndex, ttsService.rawAudioExtension()));
+                Path rawAudio = tempDir.resolve(String.format("phrase_%03d_raw.mp3", phraseIndex));
                 Path normalizedWav = tempDir.resolve(String.format("phrase_%03d.wav", phraseIndex));
 
                 try {
@@ -105,16 +104,8 @@ public class AudioGenerator {
         System.out.println("      GERADOR DE AUDIO TTS");
         System.out.println("========================================");
         System.out.println();
-        System.out.println("Motor TTS: " + Config.TTS_ENGINE);
+        System.out.println("Motor TTS: Google TTS (gTTS)");
         System.out.println("Idioma: " + Config.IDIOMA);
-        if ("windows".equalsIgnoreCase(Config.TTS_ENGINE)
-                && Config.WINDOWS_VOICE_NAME != null
-                && !Config.WINDOWS_VOICE_NAME.isBlank()) {
-            System.out.println("Voz: " + Config.WINDOWS_VOICE_NAME);
-        }
-        if ("gtts".equalsIgnoreCase(Config.TTS_ENGINE)) {
-            System.out.println("Provedor: Google Translate TTS (gTTS)");
-        }
         System.out.println("Intervalo: " + Config.INTERVALO_ENTRE_FRASES_MS + " ms");
         System.out.println();
         System.out.println("Arquivo: " + textFile.toString().replace('\\', '/'));
