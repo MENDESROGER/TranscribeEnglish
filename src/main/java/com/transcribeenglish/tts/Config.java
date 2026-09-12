@@ -7,7 +7,8 @@ package com.transcribeenglish.tts;
 public final class Config {
 
     /** Locale/idioma enviado ao Google TTS (ex.: en-US, en-GB, pt-BR). */
-    public static final String IDIOMA = "en-US";
+    //public static final String IDIOMA = "en-US";
+    public static final String IDIOMA = "pt-BR";
 
     /** Pausa entre requisições gTTS para reduzir bloqueios (ms). */
     public static final int GTTS_DELAY_MS = 250;
